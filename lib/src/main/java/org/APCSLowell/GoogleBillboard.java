@@ -16,7 +16,13 @@ public class GoogleBillboard {
   return true;
     }
     public long firstPrimeNumberIn(String n) {
-        // Write your code here.
+        for(int i = 0; i<n.length()-10; i++){
+            String sub = n.substring(i, i+10);
+            long value = Long.parseLong(sub);
+            if(isPrime(value)){
+                return value;
+            }
+        }
         return -1;
     }
 }
